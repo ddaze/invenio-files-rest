@@ -86,7 +86,7 @@ app.config.update(dict(
     CELERY_RESULT_BACKEND='cache',
     SQLALCHEMY_TRACK_MODIFICATIONS=True,
     SQLALCHEMY_DATABASE_URI=environ.get(
-        '', 'sqlite:///test.db'),
+        'SQLALCHEMY_DATABASE_URI', 'sqlite:///test.db'),
     REST_ENABLE_CORS=True,
     SECRET_KEY='CHANGEME',
     DATADIR=join(dirname(__file__), 'data')
